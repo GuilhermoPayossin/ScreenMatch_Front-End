@@ -1,0 +1,169 @@
+:root {
+    --color-light: #ffffff;
+    --color-dark: #000000;
+    --font-body: "Poppins", sans-serif;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-body)
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-bottom: 50px;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+body {
+    background-image: linear-gradient(180deg,
+                hsl(0deg 0% 0%) 0%,
+                hsl(0deg 100% 10%) 23%,
+                hsl(0deg 100% 11%) 32%,
+                hsl(0deg 100% 11%) 38%,
+                hsl(0deg 100% 11%) 44%,
+                hsl(0deg 100% 12%) 49%,
+                hsl(0deg 100% 12%) 53%,
+                hsl(0deg 100% 13%) 57%,
+                hsl(0deg 100% 13%) 61%,
+                hsl(0deg 100% 14%) 65%,
+                hsl(0deg 100% 14%) 69%,
+                hsl(359deg 100% 15%) 74%,
+                hsl(356deg 100% 16%) 79%,
+                hsl(353deg 100% 16%) 85%,
+                hsl(353deg 93% 17%) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    width: 100%;
+    height: 15vh;
+
+    .h1 {
+        color: var(--color-light);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+select,
+option {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    font-size: 24px;
+    padding: 0 1em;
+    border: solid 2px white;
+    border-radius: 8px;
+}
+
+main {
+    padding: 0 3em;
+}
+
+.header-page {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+
+    .selecao {
+        height: 4rem;
+    }
+
+    .header-logo{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 10rem;
+        height: 4rem;
+        position: absolute;
+        left: 34%;
+    }   
+}
+
+.material-symbols-outlined {
+    color: white;
+    font-size: 48px
+}
+
+.list {
+    list-style-type: none;
+    margin: 1em 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1em;
+
+    :hover {
+        scale: 1.025;
+    }
+}
+
+.list li img {
+    transition: 0.5s;
+    border: solid 1px white;
+    border-radius: 8px;
+    transition: 0.3s;
+    width: 300px;
+    height: 444px;
+}
+
+.section-lancamentos {
+    gap: 5rem;
+    padding: 2rem 1rem;
+    margin: 1rem 0px;
+    border-radius: 8px;
+    background-color: #111;
+    width: 100%;
+
+    h1 {
+        display: flex;
+        margin-left: 2rem;
+    }
+}
+
+.section-populares {
+    gap: 5rem;
+    padding: 2rem 1rem;
+    margin: 1rem 0px;
+    border-radius: 8px;
+    width: 100%;
+
+    h1 {
+        display: flex;
+        margin-left: 2rem;
+    }
+}
+
+.section-todos {
+    gap: 5rem;
+    padding: 2rem 1rem;
+    margin: 1rem 0px;
+    border-radius: 8px;
+    background-color: #111;
+    width: 100%;
+
+    h1 {
+        display: flex;
+        margin-left: 2rem;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .list {
+        overflow: hidden;
+        overflow-x: scroll;
+    }
+}
